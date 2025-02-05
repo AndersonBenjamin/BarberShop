@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} dark`}>
         <AuthProvider>
-          {children}
+          <div className="flex-1">{children}</div>
           <Toaster></Toaster>
           <Footer></Footer>
         </AuthProvider>
