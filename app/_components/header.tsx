@@ -13,7 +13,7 @@ const Header = () => {
         <Card>
             <CardContent className="px-5 py-8 justify-between flex flex-row">
                 <Link href="/">
-                    <Image src="/Logo.pnG" alt="Barber" height={22} width={130} />
+                    <Image src="/Logo.png" alt="Barber" height={22} width={130} />
                 </Link>
                 <Sheet>
                     <SheetTrigger asChild>
