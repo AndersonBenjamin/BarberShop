@@ -31,7 +31,7 @@ export default async function Home() {
     <div>
       <Header />
       <div className='px-5 pt-5'>
-        <h2 className="text-xl font-bold">Olá Usuário</h2>
+        <h2 className="text-xl font-bold"> {session?.user ? `Olá ${session?.user?.name?.split(" ")[0]}` : 'Vamos agendar um corte hoje?'} </h2>
         <p className="capitalize text-sm">
           {format(new Date(), "EEEE',' dd 'de' MMMM", {
             locale: ptBR,
@@ -41,12 +41,19 @@ export default async function Home() {
       <div className='px-5 mt-6'>
         <Search />
       </div>
-      <div className="mt-6">
-        <h2 className='pl-5 text-xs uppercase text-gray-400 font-bold mb-3'>Agendamentos</h2>
 
-        <div className='px-5 mt-6 flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden'>
-          {confirmedBookings.map(booking => <BookingItem key={booking.id} booking={booking} />)}
-        </div>
+      <div className="mt-6">
+
+        {confirmedBookings.length > 0 && (
+          <>a
+            <h2 className='pl-5 text-xs uppercase text-gray-400 font-bold mb-3'>Agendamentos</h2>
+
+            <div className='px-5 mt-6 flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden'>
+              {confirmedBookings.map(booking => <BookingItem key={booking.id} booking={booking} />)}
+            </div>
+
+          </>
+        )}
 
       </div>
       <div className='mt-6'>
