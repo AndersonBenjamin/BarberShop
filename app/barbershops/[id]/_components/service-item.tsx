@@ -95,7 +95,7 @@ const ServiceItem = ({ service, isAuthenticated, barberShop }: ServiceItemProps)
                 },
             })
         } catch (error) {
-
+            console.log(error)
         } finally {
             setSubmitIsLoading(false);
         }
