@@ -57,7 +57,6 @@ const ServiceItem = ({ service, isAuthenticated, barberShop }: ServiceItemProps)
     }
 
     const handleBookingClick = () => {
-        return
         if (!isAuthenticated) {
             return signIn();
         }
