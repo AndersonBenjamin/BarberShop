@@ -6,7 +6,7 @@ import Search from "../(home)/_components/search";
 
 interface BarberShopsPageProps {
     searchParams: {
-        search?: string;
+        search?: string | undefined;
     };
 }
 
